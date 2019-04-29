@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class character extends livingbeing {
     Scanner console = new Scanner(System.in);
+    //personal only meant for char, was meant to be for decriptions or for a romance option later on
     String haircolor;
     String eyecolor;
     String races;
