@@ -1,6 +1,9 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class livingbeing{
+   String name;
     double health;
     double atk=0.0 ;
     double def ;
@@ -17,5 +20,7 @@ public class livingbeing{
     int axeresistance;
     int arrowresistence;
     int potionresistence;
+    double attackType;
+    double dmgTaken;
 
 }
