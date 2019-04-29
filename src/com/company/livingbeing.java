@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class livingbeing{
    String name;
     double health;
+    double maxHealth;
     double atk=0.0 ;
     double def ;
     double magLimit ;

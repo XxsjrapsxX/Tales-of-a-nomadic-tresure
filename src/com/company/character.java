@@ -1,17 +1,26 @@
 package com.company;
 
+import java.awt.*;
+import java.awt.geom.Point2D;
 import java.util.Random;
 import java.util.Scanner;
 
 public class character extends livingbeing {
     Scanner console = new Scanner(System.in);
+    private final static String[] choices={"go east","go west","go north","go south","stats","quit"};
     //personal only meant for char, was meant to be for decriptions or for a romance option later on
     String haircolor;
     String eyecolor;
     String races;
     inventory inv;
-    livingbeing stats;
     String bodybuild;
+    boolean inGame;
+    Point location=new Point(0,0);
+
+    public character(){
+        super();
+        inGame=true;
+    }
 
     public int totalatkbuff() {
         return inv.weaponSlot.atkBuff + inv.helmetslot.atkBuff + inv.gloveslot.atkBuff + inv.pantslot.atkBuff + inv.chestplateslot.atkBuff + inv.bootslot.atkBuff;
@@ -81,11 +90,34 @@ public class character extends livingbeing {
         int n = rand.nextInt(25) + 1;
         return n;
     }
-    public int choice(){
-        int input= Integer.parseInt(console.nextLine());
-        if(input == 1){
-
+    public void choice(){
+            System.out.println("What would you like to do?");
+        String input=console.nextLine();
+        if(input.equals(choices[0])){
+            //go east
+            location.move(location.x-1,location.y);
+        } else if (input.equals(choices[1])){
+            //go west
+            location.move(location.x+1,location.y);
+        } else if (input.equals(choices[2])){
+            //go north
+            location.move(location.x,location.y-1);
+        } else if (input.equals(choices[3])){
+            //go south
+            location.move(location.x,location.y+1);
+        } else if (input.equals(choices[4])){
+            //print statistics
+            printStats();
+        } else if (input.equals(choices[5])){
+            //exit
+            System.out.println("Where did you go? Did you exit the game?");
+            inGame=false;
         }
+    }
+
+    public void printStats(){
+        System.out.println("Location: ("+location.x+","+location.y+")");
+        System.out.println("Health: "+health+"/"+maxHealth);
     }
 
     }

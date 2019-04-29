@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main extends inventory {
-
+    static ArrayList<Enemy>enemies= new ArrayList<Enemy>();
     public static void main(String[] args) {
         // write your code here
         Scanner console = new Scanner(System.in);
-        ArrayList<Enemy>enemies= new ArrayList<Enemy>();
-        enemies.add(new Enemy());
+
+        enemies.add(new Enemy(new livingbeing()));
+        character player=new character();
+        while (player.inGame){
+            player.choice();
+        }
 
     }
 
