@@ -7,9 +7,8 @@ public class items extends livingbeing {
     int healthbuff;
     int atkBuff;
     int defBuff;
-    int MagDefBuff;
+    int magDefBuff;
     int magatkBuff;
-    int magdef;
     int goldvalue;
     int itemweight;
     //statuseffect

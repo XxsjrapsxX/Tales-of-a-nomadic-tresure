@@ -24,7 +24,7 @@ public class character extends livingbeing {
         return inv.weaponSlot.magatkBuff + inv.helmetslot.magatkBuff + inv.gloveslot.magatkBuff + inv.pantslot.magatkBuff + inv.chestplateslot.magatkBuff + inv.bootslot.magatkBuff;
     }
     public int totalMagDefBuff() {
-        return inv.weaponSlot.MagDefBuff + inv.helmetslot.MagDefBuff + inv.gloveslot.MagDefBuff + inv.pantslot.MagDefBuff + inv.chestplateslot.MagDefBuff + inv.bootslot.MagDefBuff;
+        return inv.weaponSlot.magDefBuff + inv.helmetslot.magDefBuff + inv.gloveslot.magDefBuff + inv.pantslot.magDefBuff + inv.chestplateslot.magDefBuff + inv.bootslot.magDefBuff;
     }
 
     public int totalHealthBuff() {
