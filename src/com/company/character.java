@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class character extends livingbeing {
-    Scanner console = Main.console;
+    Scanner console = new Scanner(System.in);
     private final static String[] choices={"go east","go west","go north","go south","stats","quit"};
     //personal only meant for char, was meant to be for decriptions or for a romance option later on
     String haircolor;
@@ -15,9 +15,10 @@ public class character extends livingbeing {
     inventory inv;
     String bodybuild;
     boolean inGame;
+    Point location=new Point(0,0);
 
     public character(){
-        super(0,0);
+        super();
         inGame=true;
     }
 
@@ -41,7 +42,7 @@ public class character extends livingbeing {
     }
 
     public void block(Enemy enemy) {
-        if(enemy.attackType == livingbeing.PHYSICAL_ATK) {
+        if(enemy.attackType == 1) {
             def = def + totalDefBuff();
             enemy.atk = enemy.atk - def;
             if(enemy.atk >=0) {
@@ -49,7 +50,7 @@ public class character extends livingbeing {
             }
 
         }
-        else if(attackType == livingbeing.MAGICAL_ATK){ //made a static final double variable so stuff is easier to look at
+        else if(attackType == 2){
             magDef = magDef + totalMagDefBuff();
             enemy.magAtk = enemy.atk - magDef;
             if(enemy.magDef >=0) {
