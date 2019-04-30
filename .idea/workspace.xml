@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="23af112f-8702-405f-84cb-6dbdba65df03" name="Default Changelist" comment="">
 <<<<<<< HEAD
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/maps/0y0.sec" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/com/company/map/Biome/Biome.java" afterDir="false" />
@@ -31,11 +32,16 @@
       <change beforePath="$PROJECT_DIR$/src/com/company/livingbeing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/livingbeing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/weapon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/weapon.java" afterDir="false" />
 =======
+=======
+>>>>>>> parent of ba931e5... Working on map stuff
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/character.java" afterPath="$PROJECT_DIR$/src/com/company/character.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/livingbeing.java" afterPath="$PROJECT_DIR$/src/com/company/livingbeing.java" />
+<<<<<<< HEAD
+>>>>>>> parent of ba931e5... Working on map stuff
+=======
 >>>>>>> parent of ba931e5... Working on map stuff
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -53,9 +59,15 @@
         <entry file="file://$PROJECT_DIR$/src/com/company/weapon.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="51">
               <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
               <caret line="3" selection-start-line="3" selection-end-line="3" />
+=======
+            <state relative-caret-position="210">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
             <state relative-caret-position="210">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -86,6 +98,7 @@
         </entry>
       </file>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,6 +109,13 @@
             <state relative-caret-position="289">
               <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
 
+=======
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
@@ -146,12 +166,17 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="328">
               <caret line="85" column="23" lean-forward="true" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
 =======
             <state relative-caret-position="323">
               <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
+=======
+            <state relative-caret-position="388">
+              <caret line="109" column="25" lean-forward="true" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
             <state relative-caret-position="388">
               <caret line="109" column="25" lean-forward="true" selection-start-line="109" selection-start-column="25" selection-end-line="109" selection-end-column="25" />
@@ -172,6 +197,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/pants.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="34">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
 =======
@@ -181,6 +207,8 @@
               <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
 =======
+=======
+>>>>>>> parent of ba931e5... Working on map stuff
             <state relative-caret-position="357">
               <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding />
@@ -194,6 +222,9 @@
             <state relative-caret-position="42">
               <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
+<<<<<<< HEAD
+>>>>>>> parent of ba931e5... Working on map stuff
+=======
 >>>>>>> parent of ba931e5... Working on map stuff
             </state>
           </provider>
@@ -238,6 +269,7 @@
         <option value="$PROJECT_DIR$/src/com/company/Window.java" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/com/company/livingbeing.java" />
 =======
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
@@ -257,6 +289,13 @@
         <option value="$PROJECT_DIR$/src/com/company/items.java" />
         <option value="$PROJECT_DIR$/src/com/company/map/MapLoader.java" />
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
+=======
+        <option value="$PROJECT_DIR$/src/com/company/Enemy.java" />
+        <option value="$PROJECT_DIR$/src/com/company/items.java" />
+        <option value="$PROJECT_DIR$/src/com/company/livingbeing.java" />
+        <option value="$PROJECT_DIR$/src/com/company/character.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
         <option value="$PROJECT_DIR$/src/com/company/Enemy.java" />
         <option value="$PROJECT_DIR$/src/com/company/items.java" />
@@ -310,9 +349,13 @@
   <component name="PropertiesComponent">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556559815017" />
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556582447906" />
+=======
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556298244254" />
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556298244254" />
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -558,10 +601,14 @@
   <component name="ToolWindowManager">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
 =======
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
+=======
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -626,6 +673,7 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Attack.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Player.java" />
     <entry file="file://$PROJECT_DIR$/src/com/company/Window.java" />
@@ -633,6 +681,9 @@
     <entry file="file://$PROJECT_DIR$/src/com/company/livingbeing.java">
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/pants.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Enemy.java">
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/Enemy.java">
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -644,8 +695,12 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/helmet.java">
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -685,9 +740,13 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/helmet.java">
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/items.java">
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/items.java">
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -699,8 +758,12 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/Enemy.java">
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/pants.java">
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/pants.java">
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -734,6 +797,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+<<<<<<< HEAD
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Attack.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Player.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Window.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/helmet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
+=======
         </state>
       </provider>
     </entry>
@@ -752,6 +827,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+>>>>>>> parent of ba931e5... Working on map stuff
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/com/company/chestplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/inventory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="15" column="18" lean-forward="false" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+>>>>>>> parent of ba931e5... Working on map stuff
           <folding />
         </state>
       </provider>
@@ -802,8 +893,12 @@
       </provider>
     </entry>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/src/com/company/map/Biome/Biome.java">
 >>>>>>> ba931e5546b39745532d03efa536fc7b87aea24d
+=======
+    <entry file="file://$PROJECT_DIR$/src/com/company/weapon.java">
+>>>>>>> parent of ba931e5... Working on map stuff
 =======
     <entry file="file://$PROJECT_DIR$/src/com/company/weapon.java">
 >>>>>>> parent of ba931e5... Working on map stuff
@@ -816,6 +911,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/livingbeing.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="328">
@@ -868,11 +964,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+=======
+        <state relative-caret-position="147">
+          <caret line="7" column="21" lean-forward="true" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+>>>>>>> parent of ba931e5... Working on map stuff
         <state relative-caret-position="315">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#164#171#0" expanded="true" />
+<<<<<<< HEAD
+>>>>>>> parent of ba931e5... Working on map stuff
+=======
 >>>>>>> parent of ba931e5... Working on map stuff
           </folding>
         </state>
