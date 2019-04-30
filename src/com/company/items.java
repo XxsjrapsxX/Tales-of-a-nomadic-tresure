@@ -2,7 +2,10 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class items extends livingbeing {
+public class items /*extends livingbeing*/ {
+    public items(/*int x,int y*/){
+        //super(x,y);
+    }
     String itemname;
     int healthbuff;
     int atkBuff;

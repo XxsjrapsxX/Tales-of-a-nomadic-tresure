@@ -1,15 +1,17 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Enemy extends livingbeing {
     String StatusEffect;
     String Niceness;
     int agro;
+    public static final ArrayList<Enemy> instances=new ArrayList<>();
     //Type/race/monstername
-    public Enemy(livingbeing bob){
-
-
+    public Enemy(int x,int y){
+        super(x,y);
+        instances.add(this);
     }
 
     public double attack (character guy){
