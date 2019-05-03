@@ -7,9 +7,8 @@ public class Enemy extends livingbeing {
     String Niceness;
     int agro;
     //Type/race/monstername
-    public Enemy(livingbeing bob){
-
-
+    public Enemy(int x,int y){
+    	super(x,y);
     }
 
     public double attack (character guy){

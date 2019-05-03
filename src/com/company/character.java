@@ -18,27 +18,27 @@ public class character extends livingbeing {
     Point location=new Point(0,0);
 
     public character(){
-        super();
+        super(0,0);
         inGame=true;
     }
 
     public int totalatkbuff() {
-        return inv.weaponSlot.atkBuff + inv.helmetslot.atkBuff + inv.gloveslot.atkBuff + inv.pantslot.atkBuff + inv.chestplateslot.atkBuff + inv.bootslot.atkBuff;
+        return inv.weaponSlot.atkBuff() + inv.helmetslot.atkBuff() + inv.gloveslot.atkBuff() + inv.pantslot.atkBuff() + inv.chestplateslot.atkBuff() + inv.bootslot.atkBuff();
     }
 
     public int totalDefBuff() {
-        return inv.weaponSlot.defBuff + inv.helmetslot.defBuff + inv.gloveslot.defBuff + inv.pantslot.defBuff + inv.chestplateslot.defBuff + inv.bootslot.defBuff;
+        return inv.weaponSlot.defBuff() + inv.helmetslot.defBuff() + inv.gloveslot.defBuff() + inv.pantslot.defBuff() + inv.chestplateslot.defBuff() + inv.bootslot.defBuff();
     }
 
     public int totalMagAtkBuff() {
-        return inv.weaponSlot.magatkBuff + inv.helmetslot.magatkBuff + inv.gloveslot.magatkBuff + inv.pantslot.magatkBuff + inv.chestplateslot.magatkBuff + inv.bootslot.magatkBuff;
+        return inv.weaponSlot.magatkBuff() + inv.helmetslot.magatkBuff() + inv.gloveslot.magatkBuff() + inv.pantslot.magatkBuff() + inv.chestplateslot.magatkBuff() + inv.bootslot.magatkBuff();
     }
     public int totalMagDefBuff() {
-        return inv.weaponSlot.magDefBuff + inv.helmetslot.magDefBuff + inv.gloveslot.magDefBuff + inv.pantslot.magDefBuff + inv.chestplateslot.magDefBuff + inv.bootslot.magDefBuff;
+        return inv.weaponSlot.magDefBuff() + inv.helmetslot.magDefBuff() + inv.gloveslot.magDefBuff() + inv.pantslot.magDefBuff() + inv.chestplateslot.magDefBuff() + inv.bootslot.magDefBuff();
     }
 
     public int totalHealthBuff() {
-        return inv.weaponSlot.healthbuff + inv.helmetslot.healthbuff + inv.gloveslot.healthbuff + inv.pantslot.healthbuff + inv.chestplateslot.healthbuff + inv.bootslot.healthbuff;
+        return inv.weaponSlot.healthbuff() + inv.helmetslot.healthbuff() + inv.gloveslot.healthbuff() + inv.pantslot.healthbuff() + inv.chestplateslot.healthbuff() + inv.bootslot.healthbuff();
     }
 
     public void block(Enemy enemy) {
