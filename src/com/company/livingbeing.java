@@ -14,7 +14,7 @@ public class livingbeing{
     protected double magDef ;
     protected double karma ;
     protected double charisma ;
-    protected double dex ;
+    protected double dex;
     protected String classes;
     protected double race ;
     protected int bluntWeaponresistance;
@@ -25,6 +25,7 @@ public class livingbeing{
     protected double attackType;
     protected double dmgTaken;
     protected Point location;
+    protected boolean alive;
     public static final int D_E=1;
     public static final int D_N=0;
     public static final int D_W=3;
@@ -41,14 +42,17 @@ public class livingbeing{
     
     public livingbeing(int x,int y) {
     	location=new Point(x,y);
+    	alive=true;
     }
     
     public void move(int direction) {
     	location.setLocation(location.x+spdX[direction], location.y+spdY[direction]);
+    	alive=true;
     }
     
     public void move(int direction,int velocity) {
     	location.setLocation(location.x+(spdX[direction]*velocity), location.y+(spdY[direction]*velocity));
+    	alive=true;
     }
     
     public int directionTo(livingbeing l) {

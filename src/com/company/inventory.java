@@ -94,23 +94,30 @@ public class inventory  {
                 	helmetslot=(helmet) storageslots.get(i);
                 	storageslots.remove(storageslots.get(i));
                 	if (!(equipedHelmet==null)) {
-                		storeslots.add(equipedHelmet);
+                		storageslots.add(equipedHelmet);
                 	}
-            }
-            else {
-                System.out.println("you dont have this item.");
+            	} else {
+            		System.out.println("You dont have this item.");
+            	}
             }
         }
-
     }
+    
     public void equipchestplate(String plate){
         for(int i=0; i<storageslots.size(); i++ ){
             if(storageslots.get(i).name().equalsIgnoreCase(plate)){
-                chestplateslot=(chestplate) storageslots.get(i);
-                storageslots.remove(storageslots.get(i));
-            }
-            else {
-                System.out.println("you dont have this item.");
+            	if (storageslots.get(i).type().contains("chplt;")) {
+            		chestplate equipchestplate=chestplateslot;
+            		chestplateslot=(chestplate) storageslots.get(i);
+                	storageslots.remove(storageslots.get(i));
+               		if (!(equipchestplate==null)) {
+                		storageslots.add(equipchestplate);
+                	}
+            	} else {
+            		System.out.println("That is not a chestplate or a set of chestplates.");
+            	}
+            } else {
+                System.out.println("You dont have this item.");
             }
         }
 
@@ -121,13 +128,12 @@ public class inventory  {
             if(storageslots.get(i).name().equalsIgnoreCase(sell)){
                 gold = storageslots.get(i).goldvalue() + gold;
                 storageslots.remove(storageslots.get(i));
-            }
-            else {
+            } else {
                 System.out.println("you dont have this item.");
             }
         }
-
     }
+    
     public void additem(items item){
         storageslots.add(item);
     }

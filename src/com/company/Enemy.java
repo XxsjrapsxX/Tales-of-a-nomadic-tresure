@@ -48,5 +48,11 @@ public class Enemy extends livingbeing {
         int n = rand.nextInt(25) + 1;
         return n;
     }
+    
+    public void checkBattle() {
+    	if (location.equals(Main.player.location)) {
+    		Main.battle(this);
+    	}
+    }
 
 }
