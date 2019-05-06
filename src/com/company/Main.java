@@ -11,7 +11,7 @@ public class Main extends inventory {
     static character player;
     static Random rand=new Random();
     public static void main(String[] args) {
-    	Console.s.setTheme(Console.theme.forest);
+    	Console.s.setTheme(Console.theme.pink);
         enemies.add(new Enemy(5,1));
         player=new character();
         while (player.inGame){
