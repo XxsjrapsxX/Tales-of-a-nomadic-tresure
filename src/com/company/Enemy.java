@@ -37,8 +37,11 @@ public class Enemy extends livingbeing {
                     "\n but it missed");
 
         } else if (randomInt >= 12) {
-
-            guy.health = guy.health - magAtk;
+        	double damage=magAtk-guy.magDef;
+        	if (damage<0) {
+        		damage=0;
+        	}
+            guy.health = guy.health - (magAtk-guy.magDef);
             attackType = 2;
             return attackType;
 
@@ -51,10 +54,16 @@ public class Enemy extends livingbeing {
         return n;
     }
     
+    public void decideAttack() {
+    	
+    }
+    
     public void checkBattle() {
     	if (location.equals(Main.player.location)) {
     		Main.battle(this);
     	}
     }
+    
+    public 
 
 }

@@ -11,7 +11,7 @@ public class Main extends inventory {
     static character player;
     static Random rand=new Random();
     public static void main(String[] args) {
-    	Console.s.setTheme(Console.theme.pink);
+    	Console.s.setTheme(Console.theme.sea);
         enemies.add(new Enemy(5,1));
         player=new character();
         while (player.inGame){
@@ -24,6 +24,9 @@ public class Main extends inventory {
     	if (e.dex>player.dex) {
     		//enemy goes first
     		
+    		if (player.alive) {
+    			player.attack(enemy);
+    		}
     	} else if (e.dex<player.dex) {
     		//player goes first
     		
