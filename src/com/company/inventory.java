@@ -7,6 +7,9 @@ import com.company.items.chestplate;
 import com.company.items.gloves;
 import com.company.items.helmet;
 import com.company.items.items;
+
+import gameutil.text.Console;
+
 import com.company.items.*;
 
 public class inventory  {
@@ -35,11 +38,11 @@ public class inventory  {
             		}
             		
             	} else {
-            		System.out.println("That is not a weapon.");
+            		Console.s.println("That is not a weapon.");
             	}
             }
             else {
-                System.out.println("You don't have this item.");
+                Console.s.println("You don't have this item.");
             }
         }
 
@@ -56,11 +59,11 @@ public class inventory  {
             		}
             		
             	} else {
-            		System.out.println("That is not a boot or set of boots.");
+            		Console.s.println("That is not a boot or set of boots.");
             	}
             }
             else {
-                System.out.println("You don't have this item.");
+                Console.s.println("You don't have this item.");
             }
         }
 
@@ -76,12 +79,12 @@ public class inventory  {
             			storageslots.add(equipedGloves);
             		}
             	} else {
-            		System.out.println("That is not a glove or a set of gloves.");
+            		Console.s.println("That is not a glove or a set of gloves.");
             	}
                 
             }
             else {
-                System.out.println("You don't have this item.");
+                Console.s.println("You don't have this item.");
             }
         }
 
@@ -97,7 +100,7 @@ public class inventory  {
                 		storageslots.add(equipedHelmet);
                 	}
             	} else {
-            		System.out.println("You dont have this item.");
+            		Console.s.println("You dont have this item.");
             	}
             }
         }
@@ -114,10 +117,10 @@ public class inventory  {
                 		storageslots.add(equipchestplate);
                 	}
             	} else {
-            		System.out.println("That is not a chestplate or a set of chestplates.");
+            		Console.s.println("That is not a chestplate or a set of chestplates.");
             	}
             } else {
-                System.out.println("You dont have this item.");
+                Console.s.println("You dont have this item.");
             }
         }
 
@@ -129,7 +132,7 @@ public class inventory  {
                 gold = storageslots.get(i).goldvalue() + gold;
                 storageslots.remove(storageslots.get(i));
             } else {
-                System.out.println("you dont have this item.");
+                Console.s.println("you dont have this item.");
             }
         }
     }

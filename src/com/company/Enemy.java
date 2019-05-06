@@ -2,6 +2,8 @@ package com.company;
 
 import java.util.Random;
 
+import gameutil.text.Console;
+
 public class Enemy extends livingbeing {
     String StatusEffect;
     String Niceness;
@@ -15,7 +17,7 @@ public class Enemy extends livingbeing {
         Random r = new Random();
         int randomInt = r.nextInt(45) + 1;
         if (randomInt < 12) {
-            System.out.println("the enemey swung your sword but lost its footing" +
+            Console.s.println("the enemey swung your sword but lost its footing" +
                     "\n it missed");
 
         } else if (randomInt >= 12) {
@@ -31,7 +33,7 @@ public class Enemy extends livingbeing {
         Random r = new Random();
         int randomInt = r.nextInt(45) + 1;
         if (randomInt < 12) {
-            System.out.println("the enemy casted a wicked spell" +
+            Console.s.println("the enemy casted a wicked spell" +
                     "\n but it missed");
 
         } else if (randomInt >= 12) {

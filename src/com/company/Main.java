@@ -4,15 +4,14 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import gameutil.text.Console;
+
 public class Main extends inventory {
     static ArrayList<Enemy>enemies= new ArrayList<Enemy>();
     static character player;
     static Random rand=new Random();
-    static Scanner console;
     public static void main(String[] args) {
-        // write your code here
-        console = new Scanner(System.in);
-
+    	Console.s.setTheme(Console.theme.forest);
         enemies.add(new Enemy(5,1));
         player=new character();
         while (player.inGame){
