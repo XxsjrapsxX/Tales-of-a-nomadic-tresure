@@ -3,6 +3,8 @@ package com.company;
 import java.awt.Point;
 import java.util.ArrayList;
 
+import com.company.items.items;
+
 public class livingbeing{
 	protected String name;
     protected double health;
@@ -15,6 +17,8 @@ public class livingbeing{
     protected double karma ;
     protected double charisma ;
     protected double dex;
+    protected int focus;//(magic accuracy)
+    protected int accuracy;
     protected String classes;
     protected double race ;
     protected int bluntWeaponresistance;
@@ -26,6 +30,7 @@ public class livingbeing{
     protected double dmgTaken;
     protected Point location;
     protected boolean alive;
+    protected ArrayList<items> inv;
     public static final int D_E=1;
     public static final int D_N=0;
     public static final int D_W=3;
@@ -43,16 +48,19 @@ public class livingbeing{
     public livingbeing(int x,int y) {
     	location=new Point(x,y);
     	alive=true;
+    	inv=new ArrayList<>();
     }
     
     public void move(int direction) {
     	location.setLocation(location.x+spdX[direction], location.y+spdY[direction]);
     	alive=true;
+    	inv=new ArrayList<>();
     }
     
     public void move(int direction,int velocity) {
     	location.setLocation(location.x+(spdX[direction]*velocity), location.y+(spdY[direction]*velocity));
     	alive=true;
+    	inv=new ArrayList<>();
     }
     
     public int directionTo(livingbeing l) {
@@ -92,5 +100,15 @@ public class livingbeing{
     
     public double distanceTo(livingbeing l) {
     	return l.location.distance(location);
+    }
+    
+    public boolean checkAlive() {
+    	if (health>=0) {
+    		alive=true;
+    		return true;
+    	} else {
+    		alive=false;
+    		return false;
+    	}
     }
 }
