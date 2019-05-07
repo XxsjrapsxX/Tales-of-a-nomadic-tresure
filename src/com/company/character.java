@@ -18,11 +18,13 @@ public class character extends livingbeing {
     String bodybuild;
     int skillPts;
     boolean inGame;
-    Point location=new Point(0,0);
 
     public character(){
         super(0,0);
         inGame=true;
+        alive=true;
+        race="User";
+        classes="Typer";
         skillPts=20;
         maxHealth=50;
         health=50;
@@ -35,6 +37,7 @@ public class character extends livingbeing {
         accuracy=10;
         def=0;
         magDef=0;
+        inv=new inventory();
         Console.s.print("What is your name?");
         name=Console.s.readLine();
         skillPtScreen();
@@ -43,8 +46,8 @@ public class character extends livingbeing {
     public void skillPtScreen() {
     	boolean done=false;
     	while (!done) {
-    		Console.s.println("You have "+skillPts+". What would you like to spend them on?");
-        	Console.s.println("(type ? for help");
+    		Console.s.println("You have "+skillPts+" skill points. What would you like to spend them on?");
+        	Console.s.println("(type ? for help)");
         	Console.s.print("Skill: ");
         	String skill=Console.s.readLine();
         	if (skill.equals("?")){
@@ -76,7 +79,7 @@ public class character extends livingbeing {
         		done=true;
     		} else {
         		Console.s.println("Points: ");
-        		int points=Console.s.readInt();
+        		int points=Console.s.readLineInt();
         		if (points>skillPts) {
         			points=skillPts;
         			Console.s.println("You don't have enough skill points for that, so you'll just have to spend what's left of them.");
@@ -92,11 +95,11 @@ public class character extends livingbeing {
         				skillPts-=points;
         			break;
         			case "atk":
-        				atk+=points/2;
+        				atk+=points*.5;
         				skillPts-=points;
         			break;
         			case "magAtk":
-        				magAtk+=points/2;
+        				magAtk+=points*.5;
         				skillPts-=points;
         			break;
         			case "foc":
@@ -108,12 +111,11 @@ public class character extends livingbeing {
         				skillPts-=points;
         			break;
         			case "def":
-        				def+=points/2;
-        				skillPts-=points;
+        				def+=points*.5;
         				skillPts-=points;
         			break;
         			case "magDef":
-        				magDef+=points/2;
+        				magDef+=points*.5;
         				skillPts-=points;
         			break;
         			case "cha":
@@ -129,22 +131,96 @@ public class character extends livingbeing {
     }
 
     public int totalatkbuff() {
-        return inv.weaponSlot.atkBuff() + inv.helmetslot.atkBuff() + inv.gloveslot.atkBuff() + inv.pantslot.atkBuff() + inv.chestplateslot.atkBuff() + inv.bootslot.atkBuff();
+    	int val=0;
+    	if (!(inv.weaponSlot==null)){
+    		val+=inv.weaponSlot.atkBuff();
+    	} else if (!(inv.weaponSlot==null)){
+    		val+=inv.bootslot.atkBuff();
+    	} else if (!(inv.helmetslot==null)){
+    		val+=inv.helmetslot.atkBuff();
+    	} else if (!(inv.gloveslot==null)){
+    		val+=inv.gloveslot.atkBuff();
+    	} else if (!(inv.pantslot==null)){
+    		val+=inv.pantslot.atkBuff();
+    	} else if (!(inv.chestplateslot==null)){
+    		val+=inv.chestplateslot.atkBuff();
+    	}
+    	
+    	
+        return val;
     }
 
     public int totalDefBuff() {
-        return inv.weaponSlot.defBuff() + inv.helmetslot.defBuff() + inv.gloveslot.defBuff() + inv.pantslot.defBuff() + inv.chestplateslot.defBuff() + inv.bootslot.defBuff();
+    	int val=0;
+    	if (!(inv.weaponSlot==null)){
+    		val+=inv.weaponSlot.defBuff();
+    	} else if (!(inv.weaponSlot==null)){
+    		val+=inv.helmetslot.defBuff();
+    	} else if (!(inv.helmetslot==null)){
+    		val+=inv.bootslot.defBuff();
+    	} else if (!(inv.gloveslot==null)){
+    		val+=inv.gloveslot.defBuff();
+    	} else if (!(inv.pantslot==null)){
+    		val+=inv.pantslot.defBuff();
+    	} else if (!(inv.chestplateslot==null)){
+    		val+=inv.chestplateslot.defBuff();
+    	}
+        return val;
     }
 
     public int totalMagAtkBuff() {
-        return inv.weaponSlot.magatkBuff() + inv.helmetslot.magatkBuff() + inv.gloveslot.magatkBuff() + inv.pantslot.magatkBuff() + inv.chestplateslot.magatkBuff() + inv.bootslot.magatkBuff();
+    	int val=0;
+    	if (!(inv.weaponSlot==null)){
+    		val+=inv.weaponSlot.magatkBuff();
+    	} else if (!(inv.weaponSlot==null)){
+    		val+=inv.bootslot.magatkBuff();
+    	} else if (!(inv.helmetslot==null)){
+    		val+=inv.helmetslot.magatkBuff();
+    	} else if (!(inv.gloveslot==null)){
+    		val+=inv.gloveslot.magatkBuff();
+    	} else if (!(inv.pantslot==null)){
+    		val+=inv.pantslot.magatkBuff();
+    	} else if (!(inv.chestplateslot==null)){
+    		val+=inv.chestplateslot.magatkBuff();
+    	}
+    	
+    	
+        return val;
     }
     public int totalMagDefBuff() {
-        return inv.weaponSlot.magDefBuff() + inv.helmetslot.magDefBuff() + inv.gloveslot.magDefBuff() + inv.pantslot.magDefBuff() + inv.chestplateslot.magDefBuff() + inv.bootslot.magDefBuff();
+    	int val=0;
+    	if (!(inv.weaponSlot==null)){
+    		val+=inv.weaponSlot.magDefBuff();
+    	} else if (!(inv.weaponSlot==null)){
+    		val+=inv.helmetslot.magDefBuff();
+    	} else if (!(inv.helmetslot==null)){
+    		val+=inv.bootslot.magDefBuff();
+    	} else if (!(inv.gloveslot==null)){
+    		val+=inv.gloveslot.magDefBuff();
+    	} else if (!(inv.pantslot==null)){
+    		val+=inv.pantslot.magDefBuff();
+    	} else if (!(inv.chestplateslot==null)){
+    		val+=inv.chestplateslot.magDefBuff();
+    	}
+        return val;
     }
 
     public int totalHealthBuff() {
-        return inv.weaponSlot.healthbuff() + inv.helmetslot.healthbuff() + inv.gloveslot.healthbuff() + inv.pantslot.healthbuff() + inv.chestplateslot.healthbuff() + inv.bootslot.healthbuff();
+    	int val=0;
+    	if (!(inv.weaponSlot==null)){
+    		val+=inv.weaponSlot.healthbuff();
+    	} else if (!(inv.weaponSlot==null)){
+    		val+=inv.helmetslot.healthbuff();
+    	} else if (!(inv.helmetslot==null)){
+    		val+=inv.bootslot.defBuff();
+    	} else if (!(inv.gloveslot==null)){
+    		val+=inv.gloveslot.healthbuff();
+    	} else if (!(inv.pantslot==null)){
+    		val+=inv.pantslot.healthbuff();
+    	} else if (!(inv.chestplateslot==null)){
+    		val+=inv.chestplateslot.healthbuff();
+    	}
+        return val;
     }
 
     public void block(Enemy enemy) {
@@ -162,6 +238,7 @@ public class character extends livingbeing {
                     "\n you missed");
 
         } else if (randomInt >= 12+enemy.dex) {
+        	Console.s.println(name+" hit "+enemy.name+" with a wicked spell!");
             magAtk = magAtk + totalMagAtkBuff();
             enemy.health = enemy.health - magAtk;
 
@@ -176,8 +253,9 @@ public class character extends livingbeing {
                         "\n you missed");
 
             } else if (randomInt >= 12+enemy.dex) {
+            	Console.s.println(name+" hit "+enemy.name+"!");
                 atk = atk + totalatkbuff();
-                enemy.health = totalHealthBuff() - atk;
+                enemy.health -=atk;
             }
         }
     public int chance() {
@@ -190,16 +268,16 @@ public class character extends livingbeing {
         String input=Console.s.readLine();
         switch (input) {
         	case "go east":
-        		location.move(location.x-1,location.y);
+        		move(new Point(location.x+1,location.y));
         	break;
         	case "go west":
-        		location.move(location.x+1,location.y);
+        		move(new Point(location.x-1,location.y));
         	break;
         	case "go north":
-        		location.move(location.x,location.y-1);
+        		move(new Point(location.x,location.y+1));
         	break;
         	case "go south":
-        		location.move(location.x,location.y+1);
+        		move(new Point(location.x,location.y-1));
         	break;
         	case "stats":
         		printStats();
@@ -215,6 +293,7 @@ public class character extends livingbeing {
     }
     
     public void combatChoice(Enemy e) {
+    	Console.s.print("What do you do? ");
     	String choice=Console.s.readLine();
     	switch (choice){
     		case "attack":
@@ -225,6 +304,12 @@ public class character extends livingbeing {
     		break;
     		case "block":
     			block(e);
+    		break;
+    		case "?":
+    			Console.s.println("? - shows this screen");
+    			Console.s.println("attack - attack the enemy");
+    			Console.s.println("attack - attack the enemy with magic");
+    			Console.s.println("block - block the enemy");
     		break;
     	}
     }

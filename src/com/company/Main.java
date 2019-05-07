@@ -4,15 +4,21 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import com.company.enemies.Slime;
+import com.company.enemies.Wizard;
+
 import gameutil.text.Console;
 
 public class Main extends inventory {
     static ArrayList<Enemy>enemies= new ArrayList<Enemy>();
-    static character player;
+    public static character player;
     public static Random rand=new Random();
     public static void main(String[] args) {
     	Console.s.setTheme(Console.theme.sea);
-        enemies.add(new Enemy(5,1));
+        enemies.add(new Slime(5,1));
+        enemies.add(new Slime(10,10));
+        enemies.add(new Slime(-20,42));
+        enemies.add(new Wizard(100,-500));
         player=new character();
         while (player.inGame){
         	Console.s.setTheme(Console.theme.sea);
@@ -21,6 +27,7 @@ public class Main extends inventory {
             for (Enemy e:enemies) {
             	e.act();
             }
+            checkForBattle();
         }
 
     }
@@ -58,12 +65,21 @@ public class Main extends inventory {
     }
     
     public static void checkForBattle() {
+    	ArrayList<Enemy> deadEnemies=new ArrayList<>();
     	for (Enemy e:enemies) {
     		if (!player.alive) {
     			break;
     		}
     		//if enemy is in the space of the player they will enter a battle (battle function is called)
     		e.checkBattle();
+    		if (!e.checkAlive()){
+    			deadEnemies.add(e);
+    		}
+    	}
+    	for (Enemy e:deadEnemies){
+    		if (!e.checkAlive()){
+    			enemies.remove(e);
+    		}
     	}
     }
 

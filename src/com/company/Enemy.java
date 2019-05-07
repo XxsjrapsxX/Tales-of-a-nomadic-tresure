@@ -19,15 +19,16 @@ public class Enemy extends livingbeing {
         Random r = new Random();
         int randomInt = r.nextInt(35+accuracy) + 1;
         if (randomInt < 12+guy.dex) {
-            Console.s.println("the enemey swung your sword but lost its footing" +
+            Console.s.println(name+" swung their sword but lost its footing" +
                     "\n it missed");
 
         } else if (randomInt >= 12+guy.dex) {
+        	Console.s.println(name+" hit "+guy.name+"!");
         	double damage=atk-block;
         	if (damage<0) {
         		damage=0;
         	}
-            guy.health = health - damage;
+            guy.health = guy.health - damage;
             attackType = 1;
             return attackType;
         }
@@ -40,10 +41,11 @@ public class Enemy extends livingbeing {
         Random r = new Random();
         int randomInt = r.nextInt(35+focus) + 1;
         if (randomInt < 12+guy.dex) {
-            Console.s.println("the enemy casted a wicked spell" +
+            Console.s.println(name+" cast a wicked spell" +
                     "\n but it missed");
 
         } else if (randomInt >= 12+guy.dex) {
+        	Console.s.println(name+" hit "+guy.name+" with a wicked spell!");
         	double damage=magAtk-blockMag;
         	if (damage<0) {
         		damage=0;
@@ -75,6 +77,7 @@ public class Enemy extends livingbeing {
     public void checkBattle() {
     	if (location.equals(Main.player.location)) {
     		Console.s.setTheme(Console.theme.forest);
+    		Console.s.println(Main.player.name+" is fighting "+name+"!");
     		while (Main.player.checkAlive()&&checkAlive()) {
     			Main.battle(this);
     		}
@@ -85,7 +88,7 @@ public class Enemy extends livingbeing {
      * 
      */
     public void act() {
-    	
+    	moveToward(Main.player, 1);
     }
 
 }

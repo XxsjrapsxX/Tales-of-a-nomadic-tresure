@@ -5,6 +5,8 @@ import java.util.ArrayList;
 
 import com.company.items.items;
 
+import gameutil.text.Console;
+
 public class livingbeing{
 	protected String name;
     protected double health;
@@ -20,7 +22,7 @@ public class livingbeing{
     protected int focus;//(magic accuracy)
     protected int accuracy;
     protected String classes;
-    protected double race ;
+    protected String race ;
     protected int bluntWeaponresistance;
     protected int swordresistance;
     protected int axeresistance;
@@ -51,16 +53,19 @@ public class livingbeing{
     	inv=new ArrayList<>();
     }
     
+    public void move(Point p){
+    	location=p;
+    	Console.s.println(name+" move to ("+p.x+", "+p.y+")");
+    }
+    
     public void move(int direction) {
     	location.setLocation(location.x+spdX[direction], location.y+spdY[direction]);
-    	alive=true;
-    	inv=new ArrayList<>();
+    	Console.s.println(name+" move to ("+location.x+", "+location.y+")");
     }
     
     public void move(int direction,int velocity) {
     	location.setLocation(location.x+(spdX[direction]*velocity), location.y+(spdY[direction]*velocity));
-    	alive=true;
-    	inv=new ArrayList<>();
+    	Console.s.println(name+" move to ("+location.x+", "+location.y+")");
     }
     
     public int directionTo(livingbeing l) {
@@ -98,6 +103,15 @@ public class livingbeing{
     	return D_NULL;
     }
     
+    public void moveToward(livingbeing l,int velocity){
+    	if (velocity>distanceTo(l)){
+    		move(l.location);
+    	} else {
+    		move(directionTo(l),velocity);
+    	}
+    	Console.s.println(name+" is focused on "+l.name+"...");
+    }
+    
     public double distanceTo(livingbeing l) {
     	return l.location.distance(location);
     }
@@ -109,6 +123,13 @@ public class livingbeing{
     	} else {
     		alive=false;
     		return false;
+    	}
+    }
+    
+    public void heal(double amount){
+    	health+=amount;
+    	if (health>maxHealth){
+    		health=maxHealth;
     	}
     }
 }
