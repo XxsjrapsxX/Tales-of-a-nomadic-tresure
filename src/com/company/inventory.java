@@ -1,5 +1,6 @@
 package com.company;
 
+import gameutil.text.Console;
 import java.util.ArrayList;
 
 import com.company.items.boots;
@@ -7,10 +8,8 @@ import com.company.items.chestplate;
 import com.company.items.gloves;
 import com.company.items.helmet;
 import com.company.items.items;
-
-import gameutil.text.Console;
-
-import com.company.items.*;
+import com.company.items.pants;
+import com.company.items.weapon;
 
 public class inventory  {
     weapon weaponSlot;

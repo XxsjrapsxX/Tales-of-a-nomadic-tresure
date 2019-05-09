@@ -1,13 +1,10 @@
 package com.company;
 
-import java.awt.*;
-import java.awt.geom.Point2D;
+import java.awt.Point;
+import gameutil.text.Console;
 import java.util.Random;
-import java.util.Scanner;
 
 import com.company.items.items;
-
-import gameutil.text.Console;
 
 public class character extends livingbeing {
     //personal only meant for char, was meant to be for decriptions or for a romance option later on
@@ -38,6 +35,7 @@ public class character extends livingbeing {
         def=0;
         magDef=0;
         inv=new inventory();
+        Console.s.readInt();
         Console.s.print("What is your name?");
         name=Console.s.readLine();
         skillPtScreen();

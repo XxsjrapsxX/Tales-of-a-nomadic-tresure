@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.util.Random;
 
 import gameutil.text.Console;
