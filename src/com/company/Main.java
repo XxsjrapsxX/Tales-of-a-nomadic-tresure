@@ -13,7 +13,7 @@ public class Main extends inventory {
     public static Random rand=new Random();
     public static void main(String[] args) {
     	Console.s.setUserNextLineEnabled(false);
-    	Console.s.setTheme(Console.theme.sea);
+    	Console.s.setTheme(Console.theme.shell2);
         enemies.add(new Slime(5,1));
         enemies.add(new Slime(10,10));
         enemies.add(new Slime(-20,42));
