@@ -17,30 +17,30 @@ public class Wizard extends Enemy{
 		dex=3;
 		atk=2;
 		charisma=10;
-        magAtk=4;
-        karma=0;
-        focus=12;
-        accuracy=8;
-        def=0;
-        magDef=4;
+		magAtk=4;
+		karma=0;
+		focus=12;
+		accuracy=8;
+		def=0;
+		magDef=4;
 	}
-	
+
 	public void castHealSpell(){
 		Console.s.println("Wizard cast a healing spell!");
 		heal(Main.rand.nextInt(2)+.1);
 	}
-	
+
 	public void decideAttack(character guy) {
-    	int atkType=Main.rand.nextInt(3);
-    	if (atkType==0) {
-    		attack(guy);
-    	} else if (atkType==1){
-    		magicAttack(guy);
-    	} else {
-    		castHealSpell();
-    	}
-    }
-	
+		int atkType=Main.rand.nextInt(3);
+		if (atkType==0) {
+			attack(guy);
+		} else if (atkType==1){
+			magicAttack(guy);
+		} else {
+			castHealSpell();
+		}
+	}
+
 	public void act(){
 		if (distanceTo(Main.player)>15&&health<30){
 			castHealSpell();

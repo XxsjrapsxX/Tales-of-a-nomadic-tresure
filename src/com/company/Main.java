@@ -14,8 +14,8 @@ public class Main extends inventory {
     public static character player;
     public static Random rand=new Random();
     public static void main(String[] args) {
-
-    	Console.s.setUserNextLineEnabled(false);
+		Console.s.readLineInt();
+		Console.s.setUserNextLineEnabled(false);
     	Console.s.setTheme(Console.theme.shell2);
         enemies.add(new Slime(5,1));
         enemies.add(new Slime(10,10));
