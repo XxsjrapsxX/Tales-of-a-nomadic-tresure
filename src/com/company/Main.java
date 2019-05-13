@@ -1,18 +1,19 @@
 package com.company;
 
-import gameutil.text.Console;
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 import com.company.enemies.Slime;
 import com.company.enemies.Wizard;
+
+import gameutil.text.Console;
 
 public class Main extends inventory {
     static ArrayList<Enemy>enemies= new ArrayList<Enemy>();
     public static character player;
     public static Random rand=new Random();
     public static void main(String[] args) {
-    	Console.s.setUserNextLineEnabled(false);
     	Console.s.setTheme(Console.theme.sea);
         enemies.add(new Slime(5,1));
         enemies.add(new Slime(10,10));

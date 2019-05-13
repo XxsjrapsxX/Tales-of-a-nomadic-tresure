@@ -1,10 +1,11 @@
 package com.company;
 
 import java.awt.Point;
-import gameutil.text.Console;
 import java.util.ArrayList;
 
 import com.company.items.items;
+
+import gameutil.text.Console;
 
 public class livingbeing{
 	protected String name;
