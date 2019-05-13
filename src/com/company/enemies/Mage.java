@@ -42,12 +42,6 @@ public class Mage extends Enemy{
     }
 
     public void act(){
-        if (distanceTo(Main.player)>15&&health<30){
-            castHealSpell();
-        } else if (health<=10){
-            castHealSpell();
-        } else {
-            moveToward(Main.player,2);
-        }
+        moveToward(Main.player,2);
     }
 }
