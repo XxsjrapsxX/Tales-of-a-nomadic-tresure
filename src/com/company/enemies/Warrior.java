@@ -26,8 +26,8 @@ public class Warrior extends Enemy{
     }
 
     public void HeavySwing(){
-        Console.s.println("Wizard cast a Fire spell!");
-        Main.player.health-=magAtk +atk * 1.5;
+        Console.s.println("The warrior sliced through the air with great force!!");
+        Main.player.health-=atk * 2;
     }
 
     public void decideAttack(character guy) {
