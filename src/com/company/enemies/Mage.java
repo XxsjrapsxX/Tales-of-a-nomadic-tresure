@@ -23,6 +23,7 @@ public class Mage extends Enemy{
         accuracy=8;
         def=0;
         magDef=4;
+        EXP = 25;
     }
 
     public void castFireSpell(){

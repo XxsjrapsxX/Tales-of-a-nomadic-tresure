@@ -19,6 +19,7 @@ public class livingbeing{
     public double karma ;
     public double charisma ;
     public double dex;
+    public int EXP;
     public int focus;//(magic accuracy)
     public int accuracy;
     public String classes;

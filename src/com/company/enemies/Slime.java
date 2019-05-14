@@ -21,6 +21,7 @@ public class Slime extends Enemy {
         accuracy=12;
         def=0;
         magDef=0;
+        EXP = 5;
 	}
 	
 	public void decideAttack(character guy){

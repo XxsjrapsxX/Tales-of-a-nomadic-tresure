@@ -37,6 +37,7 @@ public class character extends livingbeing {
         accuracy=10;
         def=0;
         magDef=0;
+        EXP = 0;
         inv=new inventory();
         Console.s.print("What is your name?");
         name=Console.s.readLine();

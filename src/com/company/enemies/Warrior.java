@@ -23,6 +23,7 @@ public class Warrior extends Enemy{
         accuracy=13;
         def=14;
         magDef=0;
+        EXP= 40;
     }
 
     public void HeavySwing(){

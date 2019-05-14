@@ -1,28 +1,27 @@
-package com.company.enemies;
+package com.company.enemies.Bosses;
 import com.company.Enemy;
 import com.company.Main;
 import com.company.character;
 
 import gameutil.text.Console;
 
-public class Rogue_Theif extends Enemy{
+public class theGreatSlimeKing extends Enemy{
 
-    public Rogue_Theif(int x, int y) {
+    public theGreatSlimeKing(int x, int y) {
         super(x, y);
-        name="The Rogue_Theif";
+        name="The theGreatSlimeKing";
         race="Half-elf";
-        maxHealth=25;
-        health=25;
-        dex=10;
-        atk=5;
-        charisma=19;
-        magAtk=5;
-        karma=8;
-        focus=12;
-        accuracy=13;
+        maxHealth=125;
+        health=125;
+        dex=9;
+        atk=17;
+        charisma=0;
+        magAtk=16;
+        karma=10;
+        focus=8;
+        accuracy=10;
         def=8;
         magDef=0;
-        EXP=35;
     }
 
     public void doubleSlash(){
