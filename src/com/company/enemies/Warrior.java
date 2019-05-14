@@ -6,26 +6,26 @@ import com.company.character;
 
 import gameutil.text.Console;
 
-public class Mage extends Enemy{
+public class Warrior extends Enemy{
 
-    public Mage(int x, int y) {
+    public Warrior(int x, int y) {
         super(x, y);
-        name="The mage";
-        race="Mage";
-        maxHealth=30;
-        health=30;
-        dex=3;
-        atk=2;
-        charisma=10;
-        magAtk=4;
-        karma=0;
+        name="The Warrior";
+        race="Dwarf";
+        maxHealth=60;
+        health=60;
+        dex=6;
+        atk=8;
+        charisma=4;
+        magAtk=0;
+        karma=8;
         focus=12;
-        accuracy=8;
-        def=0;
-        magDef=4;
+        accuracy=13;
+        def=14;
+        magDef=0;
     }
 
-    public void castFireSpell(){
+    public void HeavySwing(){
         Console.s.println("Wizard cast a Fire spell!");
         Main.player.health-=magAtk +atk * 1.5;
     }
@@ -34,10 +34,8 @@ public class Mage extends Enemy{
         int atkType=Main.rand.nextInt(3);
         if (atkType==0) {
             attack(guy);
-        } else if (atkType==1){
-            magicAttack(guy);
-        } else {
-            castFireSpell();
+        } else if(atkType == 1) {
+            HeavySwing();
         }
     }
 
