@@ -22,8 +22,8 @@ public class Wizard extends Enemy{
 		focus=12;
 		accuracy=8;
 		def=0;
-		EXP = 20;
 		magDef=4;
+		EXP = 20;
 	}
 
 	public void castHealSpell(){

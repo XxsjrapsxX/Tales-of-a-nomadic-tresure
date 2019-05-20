@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import com.company.enemies.Mage;
 import com.company.enemies.Slime;
 import com.company.enemies.Wizard;
 
@@ -21,6 +22,7 @@ public class Main extends inventory {
         enemies.add(new Slime(10,10));
         enemies.add(new Slime(-20,42));
         enemies.add(new Wizard(100,-500));
+        enemies.add(new Mage(0,0));
         player=new character();
         while (player.inGame){
         	Console.s.setTheme(Console.theme.sea);
@@ -42,6 +44,7 @@ public class Main extends inventory {
     			player.combatChoice(e);
     			if (!e.checkAlive()) {
     				player.loot(e);
+    				player.lvUp(e);
     			}
     		} else {
     			Console.s.setTheme(Console.theme.shell2);
@@ -55,6 +58,7 @@ public class Main extends inventory {
     			e.decideAttack(player);
     		} else {
     			player.loot(e);
+    			player.lvUp(e);
     		}
     	} else {
     		//both go at the same time
@@ -84,5 +88,6 @@ public class Main extends inventory {
     		}
     	}
     }
+    
 
 }

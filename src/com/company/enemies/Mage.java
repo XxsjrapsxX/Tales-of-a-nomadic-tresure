@@ -28,7 +28,9 @@ public class Mage extends Enemy{
 
     public void castFireSpell(){
         Console.s.println("Wizard cast a Fire spell!");
-        Main.player.health-=magAtk +atk * 1.5;
+        magAtk*=1.5;
+        magicAttack(Main.player);
+        magAtk/=1.5;
     }
 
     public void decideAttack(character guy) {

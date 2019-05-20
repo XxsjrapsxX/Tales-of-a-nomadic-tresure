@@ -10,10 +10,10 @@ public class theGreatSlimeKing extends Enemy {
     public theGreatSlimeKing(int x, int y) {
         super(x, y);
         name = "The theGreatSlimeKing";
-        race = "Half-elf";
+        race = "Slime";
         maxHealth = 125;
         health = 125;
-        dex = 9;
+        dex = 8;
         atk = 17;
         charisma = 0;
         magAtk = 16;
@@ -22,13 +22,14 @@ public class theGreatSlimeKing extends Enemy {
         accuracy = 10;
         def = 20;
         magDef = 20;
+        EXP=200;
     }
 
     public void slimeSpikeVolley() {
         Console.s.println("The great slime king sent slime flying");
-        Main.player.health -= atk * 1;
-        Main.player.health -= atk * 1;
-        Main.player.health -= atk * 1;
+        attack(Main.player);
+        attack(Main.player);
+        attack(Main.player);
     }
 
     public void decideAttack(character guy) {

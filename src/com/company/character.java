@@ -17,6 +17,9 @@ public class character extends livingbeing {
     inventory inv;
     String bodybuild;
     int skillPts;
+    int xp=0;
+    int xptn=100;
+    int lv=0;
     boolean inGame;
 
     public character(){
@@ -129,6 +132,17 @@ public class character extends livingbeing {
         	}
     	}
     	
+    }
+    
+    public void lvUp(Enemy e) {
+    	xp+=e.EXP;
+    	if (xp>=xptn) {
+    		xp-=xptn;
+    		xptn*=2;
+    		skillPts+=Main.rand.nextInt(lv)+1;
+    		Console.s.println("YOU LEVELED UPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP!!!!!!!!!!!!!! Good job.");
+    		skillPtScreen();
+    	}
     }
 
     public int totalatkbuff() {
@@ -286,11 +300,66 @@ public class character extends livingbeing {
         	case "skills":
         		skillPtScreen();
         	break;
+        	case "look around":
+        		lookForNearByEnemies();
+        	break;
+        	case "?":
+        		Console.s.println("? - this screen");
+        		Console.s.println("go north - move north");
+        		Console.s.println("go west - move west");
+        		Console.s.println("go south - move south");
+        		Console.s.println("stats - print your statistics");
+        		Console.s.println("skills - go to skill screen where you may spend skill pts");
+        		Console.s.println("look around - look for enemies in a 5 ft. radius");
+        		Console.s.println("sneak - toggles sneaking");
+        	break;
         	case "quit":
         		Console.s.println("Where did you go? Did you exit the game?");
         		inGame=false;
         	break;
+        	
+        	//not listed on help screen
+        	case "attack":
+        		Console.s.println("You have killed yourself.");
+        		inGame=false;
+        	break;
+        	case "attack mag":
+        		lv=0;
+        		race="User";
+                classes="Typer";
+                skillPts=81;
+                maxHealth=2.5;
+                health=2.5;
+                dex=0;
+                atk=0;
+                magAtk=0;
+                charisma=0;
+                karma=0;
+                focus=0;
+                accuracy=0;
+                def=0;
+                magDef=0;
+                EXP = 0;
+                System.out.println(name+" cast a strange spell on themselves...");
+                skillPtScreen();
+            break;
+        	case "sneak":
+            	sneaking=!sneaking;
+            break;
+        	case "e":
+        		move(new Point(location.x+1,location.y));
+        	break;
+        	case "w":
+        		move(new Point(location.x-1,location.y));
+        	break;
+        	case "n":
+        		move(new Point(location.x,location.y+1));
+        	break;
+        	case "s":
+        		move(new Point(location.x,location.y-1));
+        	break;
         }
+        
     }
     
     public void combatChoice(Enemy e) {
@@ -309,7 +378,7 @@ public class character extends livingbeing {
     		case "?":
     			Console.s.println("? - shows this screen");
     			Console.s.println("attack - attack the enemy");
-    			Console.s.println("attack - attack the enemy with magic");
+    			Console.s.println("attack mag - attack the enemy with magic");
     			Console.s.println("block - block the enemy");
     		break;
     	}
@@ -329,5 +398,20 @@ public class character extends livingbeing {
     	}
     	skillPts++;
     }
+    
+    public void lookForNearByEnemies() {
+    	boolean enemiesFound=false;
+    	for (Enemy e:Main.enemies) {
+    		if (distanceTo(e)<=5) {
+    			if (!(DirectionToWithSenses(e)==8)) {
+    				enemiesFound=true;
+    				Console.s.println(e.name + " is "+distanceTo(e)+" ft. to the "+directionToString(directionTo(e)));
+    			}
+    		}
+    	}
+    	if (!enemiesFound) {
+    		Console.s.println("Could not find any nearby enemies...");
+    	}
     }
+}
 

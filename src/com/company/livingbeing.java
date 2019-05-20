@@ -12,7 +12,8 @@ public class livingbeing{
     public double health;
     public double maxHealth;
     public double atk=0.0 ;
-    public double def ;
+    public double wisdom;
+    public double def;
     public double magLimit ;
     public double magAtk;
     public double magDef ;
@@ -33,6 +34,7 @@ public class livingbeing{
     public double dmgTaken;
     public Point location;
     public boolean alive;
+    public boolean sneaking=false;
     public ArrayList<items> inv;
     public static final int D_E=1;
     public static final int D_N=0;
@@ -61,12 +63,10 @@ public class livingbeing{
     
     public void move(int direction) {
     	location.setLocation(location.x+spdX[direction], location.y+spdY[direction]);
-    	Console.s.println(name+" move to ("+location.x+", "+location.y+")");
     }
     
     public void move(int direction,int velocity) {
     	location.setLocation(location.x+(spdX[direction]*velocity), location.y+(spdY[direction]*velocity));
-    	Console.s.println(name+" move to ("+location.x+", "+location.y+")");
     }
     
     public int directionTo(livingbeing l) {
@@ -113,6 +113,21 @@ public class livingbeing{
     	Console.s.println(name+" is focused on "+l.name+"...");
     }
     
+    public void moveTowardWithSenses(livingbeing l,int velocity){
+    	int direction=DirectionToWithSenses(l);
+    	if (direction==D_NULL) {
+    		move(Main.rand.nextInt(7),velocity);
+    		Console.s.println(name+" is looking for "+l.name+"...");
+    	} else if (velocity>distanceTo(l)){
+    		move(direction,(int)distanceTo(l));
+    		Console.s.println(name+" is focused on "+l.name+"...");
+    	} else {
+    		move(direction,velocity);
+    		Console.s.println(name+" is focused on "+l.name+"...");
+    	}
+    	
+    }
+    
     public double distanceTo(livingbeing l) {
     	return l.location.distance(location);
     }
@@ -131,6 +146,40 @@ public class livingbeing{
     	health+=amount;
     	if (health>maxHealth){
     		health=maxHealth;
+    	}
+    }
+    
+    public int DirectionToWithSenses(livingbeing l) {
+    	if (l.sneaking) {
+    		if (Main.rand.nextInt((int) (20+wisdom))>Main.rand.nextInt((int) (20+l.dex))) {
+    			return directionTo(l);
+    		} else {
+    			return D_NULL;
+    		}
+    	} else {
+    		return directionTo(l);
+    	}
+    }
+    
+    public String directionToString(int direction) {
+    	if (direction==D_E) {
+    		return "East";
+    	} else if (direction==D_N) {
+    		return "North";
+    	} else if (direction==D_W) {
+    		return "West";
+    	} else if (direction==D_S) {
+    		return "South";
+    	} else if (direction==D_NE) {
+    		return "North-East";
+    	} else if (direction==D_SE) {
+    		return "South-East";
+    	} else if (direction==D_NW) {
+    		return "North-West";
+    	} else if (direction==D_SW) {
+    		return "South-West";
+    	} else {
+    		return "Unknown";
     	}
     }
 }
