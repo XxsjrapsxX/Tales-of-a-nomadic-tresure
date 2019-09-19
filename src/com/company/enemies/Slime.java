@@ -29,6 +29,6 @@ public class Slime extends Enemy {
 	}
 	
 	public void act(){
-		moveToward(Main.player,1);
+		
 	}
 }

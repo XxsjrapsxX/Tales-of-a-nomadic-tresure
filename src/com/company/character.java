@@ -397,21 +397,7 @@ public class character extends livingbeing {
     		l.inv.remove(i);
     	}
     	skillPts++;
-    }
-    
-    public void lookForNearByEnemies() {
-    	boolean enemiesFound=false;
-    	for (Enemy e:Main.enemies) {
-    		if (distanceTo(e)<=5) {
-    			if (!(DirectionToWithSenses(e)==8)) {
-    				enemiesFound=true;
-    				Console.s.println(e.name + " is "+distanceTo(e)+" ft. to the "+directionToString(directionTo(e)));
-    			}
-    		}
-    	}
-    	if (!enemiesFound) {
-    		Console.s.println("Could not find any nearby enemies...");
-    	}
+    	//add xp instead of skill points.
     }
 }
 

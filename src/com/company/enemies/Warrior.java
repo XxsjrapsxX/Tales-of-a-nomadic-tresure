@@ -41,6 +41,6 @@ public class Warrior extends Enemy{
     }
 
     public void act(){
-        moveTowardWithSenses(Main.player,2);
+        
     }
 }
