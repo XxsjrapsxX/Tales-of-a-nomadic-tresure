@@ -33,58 +33,58 @@ public class Main extends inventory {
     }
     
     public static void battle(ArrayList<Enemy> enemies) {
-    	for (Enemy e:enemies) {
-    		if (e.dex>player.dex) {
-        		//enemy goes first
-        		e.act();
-        		if (player.alive) {
-        			player.combatChoice(e);
-        			if (!e.checkAlive()) {
-        				player.loot(e);
-        				player.lvUp(e);
+    	boolean fighting=true;
+    	while (fighting) {
+    		for (Enemy e:enemies) {
+    			if (e.dex>player.dex) {
+    				//enemy goes first
+    				e.act();
+    				if (player.alive) {
+    					player.combatChoice(e);
+    					if (!e.checkAlive()) {
+    						player.loot(e);
+    						player.lvUp(e);
+    					}
+    				} else {
+    					Console.s.setTheme(Console.theme.shell2);
+    					Console.s.println("GAME OVER");
+    					player.inGame=false;
+    					fighting=false;
+    				}
+    			} else if (e.dex<player.dex) {
+    				//player goes first
+    				player.combatChoice(e);
+    				if (e.checkAlive()) {
+    					e.decideAttack(player);
+    					if (!player.alive) {
+    						Console.s.setTheme(Console.theme.shell2);
+        					Console.s.println("GAME OVER");
+        					player.inGame=false;
+        					fighting=false;
+    					}
+    				} else {
+    					player.loot(e);
+    					player.lvUp(e);
         			}
-        		} else {
-        			Console.s.setTheme(Console.theme.shell2);
-        			Console.s.println("GAME OVER");
-        			player.inGame=false;
-        		}
-        	} else if (e.dex<player.dex) {
-        		//player goes first
-        		player.combatChoice(e);
-        		if (e.checkAlive()) {
-        			e.decideAttack(player);
-        		} else {
-        			player.loot(e);
-        			player.lvUp(e);
-        		}
-        	} else {
-        		//both go at the same time
-        		player.combatChoice(e);
-        		e.act();
-        		if (!e.checkAlive()&&player.checkAlive()) {
-        			player.loot(e);
-        		}
-        	}
-        }
-        
-        public static void checkForBattle() {
-        	ArrayList<Enemy> deadEnemies=new ArrayList<>();
-        	for (Enemy e:enemies) {
-        		if (!player.alive) {
-        			break;
-        		}
-        		//if enemy is in the space of the player they will enter a battle (battle function is called)
-        		e.checkBattle();
-        		if (!e.checkAlive()){
-        			deadEnemies.add(e);
-        		}
-        		for (Enemy e:deadEnemies){
-        			if (!e.checkAlive()){
-        			enemies.remove(e);
-        			}
-        		}
+    			} else {
+    				//both go at the same time
+    				player.combatChoice(e);
+    				e.act();
+    				if (!e.checkAlive()&&player.checkAlive()) {
+    					player.loot(e);
+    				} else {
+    					Console.s.setTheme(Console.theme.shell2);
+    					Console.s.println("GAME OVER");
+    					player.inGame=false;
+    					fighting=false;
+    				}
+    			}
+    		}
     	}
     }
+
+	public static void checkForBattle() {
+	}
     
     public static void addTile(Tile t) {
     	tiles.put(new PointR2(t.getX(), t.getY()),t);
