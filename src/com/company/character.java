@@ -301,7 +301,8 @@ public class character extends livingbeing {
         		skillPtScreen();
         	break;
         	case "look around":
-        		lookForNearByEnemies();
+        		//lookForNearByEnemies();
+        		//look around....
         	break;
         	case "?":
         		Console.s.println("? - this screen");
@@ -310,7 +311,7 @@ public class character extends livingbeing {
         		Console.s.println("go south - move south");
         		Console.s.println("stats - print your statistics");
         		Console.s.println("skills - go to skill screen where you may spend skill pts");
-        		Console.s.println("look around - look for enemies in a 5 ft. radius");
+        		//Console.s.println("look around - look for enemies in a 5 ft. radius");
         		Console.s.println("sneak - toggles sneaking");
         	break;
         	case "quit":
@@ -397,21 +398,7 @@ public class character extends livingbeing {
     		l.inv.remove(i);
     	}
     	skillPts++;
-    }
-    
-    public void lookForNearByEnemies() {
-    	boolean enemiesFound=false;
-    	for (Enemy e:Main.enemies) {
-    		if (distanceTo(e)<=5) {
-    			if (!(DirectionToWithSenses(e)==8)) {
-    				enemiesFound=true;
-    				Console.s.println(e.name + " is "+distanceTo(e)+" ft. to the "+directionToString(directionTo(e)));
-    			}
-    		}
-    	}
-    	if (!enemiesFound) {
-    		Console.s.println("Could not find any nearby enemies...");
-    	}
+    	//add xp instead of skill points.
     }
 }
 

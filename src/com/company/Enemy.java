@@ -74,7 +74,7 @@ public class Enemy extends livingbeing {
     	}
     }
     
-    public void checkBattle() {
+    /*public void checkBattle() {
     	if (location.equals(Main.player.location)) {
     		Console.s.setTheme(Console.theme.forest);
     		Console.s.println(Main.player.name+" is fighting "+name+"!");
@@ -82,7 +82,7 @@ public class Enemy extends livingbeing {
     			Main.battle(this);
     		}
     	}
-    }
+    }*/
     
     /**What the enemy should do on it's turn outside of combat
      * 

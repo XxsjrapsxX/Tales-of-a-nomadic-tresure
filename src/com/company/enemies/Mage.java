@@ -45,6 +45,6 @@ public class Mage extends Enemy{
     }
 
     public void act(){
-        moveTowardWithSenses(Main.player,2);
+        
     }
 }

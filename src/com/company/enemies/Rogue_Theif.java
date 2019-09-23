@@ -42,15 +42,6 @@ public class Rogue_Theif extends Enemy{
     }
 
     public void act(){
-    	if (sneaking) {
-    		moveTowardWithSenses(Main.player,1);
-    	} else {
-    		moveTowardWithSenses(Main.player,2);
-    	}
-    	if (distanceTo(Main.player)>6) {
-    		sneaking=true;
-    	} else {
-    		sneaking=false;
-    	}
+    	
     }
 }
